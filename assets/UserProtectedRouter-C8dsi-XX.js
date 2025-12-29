@@ -1,0 +1,1 @@
+import{C as a,ad as c,j as o,aw as r}from"./index-CZTSyGXU.js";const p=({children:s,allowFor:e})=>{const t=!!a.get("userInfo"),n=c();return e==="protected"&&!t?o.jsx(r,{to:"/login",replace:!0,state:{from:n}}):e==="public"&&t?o.jsx(r,{to:"/",replace:!0}):s};export{p as default};
