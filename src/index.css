@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+body {
+  position: relative;
+  z-index: 9999;
+}
+
+.bg-anim {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.bg-anim .bubble {
+  position: absolute;
+  bottom: -150px;
+  border-radius: 50%;
+  animation: rise linear infinite;
+}
+
+.bg-anim .bubble:nth-child(n) {
+  background: rgba(255, 165, 0, 0.25);
+}
+.bg-anim .bubble:nth-child(1) {
+  left: 5%;
+  width: 20px;
+  height: 20px;
+  animation-duration: 6s;
+}
+.bg-anim .bubble:nth-child(2) {
+  left: 15%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 8s;
+}
+.bg-anim .bubble:nth-child(3) {
+  left: 25%;
+  width: 15px;
+  height: 15px;
+  animation-duration: 5s;
+}
+.bg-anim .bubble:nth-child(4) {
+  left: 40%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 9s;
+}
+.bg-anim .bubble:nth-child(5) {
+  left: 55%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 7s;
+}
+.bg-anim .bubble:nth-child(6) {
+  left: 70%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 10s;
+}
+.bg-anim .bubble:nth-child(7) {
+  left: 85%;
+  width: 18px;
+  height: 18px;
+  animation-duration: 4s;
+}
+
+.bg-anim .bubble:nth-child(8) {
+  left: 12%;
+  width: 28px;
+  height: 28px;
+  animation-duration: 7s;
+}
+.bg-anim .bubble:nth-child(9) {
+  left: 62%;
+  width: 22px;
+  height: 22px;
+  animation-duration: 6s;
+}
+.bg-anim .bubble:nth-child(10) {
+  left: 33%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 11s;
+}
+
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-120vh) scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Navbar is notLogin Links */
+#loginOk a.active {
+  background-color: orange;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+nav a.active {
+  background-color: orange;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+input,
+textarea,
+select {
+  caret-color: orange;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #fb923c !important;
+  outline: none;
+  box-shadow: 0 0 0 1px #fb923c;
+  transition: .3s linear;
+}
+button:hover {
+  background-color: #eb713d;
+}
