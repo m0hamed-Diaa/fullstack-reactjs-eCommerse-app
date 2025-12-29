@@ -11,6 +11,7 @@ import {
   Field,
   Text,
   Flex,
+  Image,
 } from "@chakra-ui/react";
 import axiosInstance from "../config/axios.config";
 import toast from "react-hot-toast";
@@ -164,7 +165,7 @@ export default function LoginPage() {
           pointerEvents={"none"}
         >
           <Flex align="center" gap={"2"} justify="center" w="100%">
-            <img
+            <Image
               width={"28px"}
               height={"28px"}
               src="../../src/assets/Google logo icon wit.png"

@@ -1,7 +1,7 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
 import { Toaster } from "react-hot-toast";
-// import HomeIntro from "./components/OnOpenPage";
+import HomeIntro from "./components/OnOpenPage";
 
 const App = () => {
   return (
@@ -11,8 +11,8 @@ const App = () => {
           <span key={i} className="bubble"></span>
         ))}
       </div>
-      
-      {/* <HomeIntro /> */}
+
+      <HomeIntro />
       <RouterProvider router={router} />
       <Toaster />
     </main>
