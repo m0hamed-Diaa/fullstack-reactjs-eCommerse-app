@@ -168,7 +168,7 @@ export default function LoginPage() {
             <Image
               width={"28px"}
               height={"28px"}
-              src="../../src/assets/Google logo icon wit.png"
+              src="./Google_logo_icon.png"
               alt="iconGoogle"
             />
             <Text fontWeight="bold">Sign in with Google</Text>

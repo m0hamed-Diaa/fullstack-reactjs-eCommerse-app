@@ -23,7 +23,7 @@ export default function HomeIntro() {
     >
       <Center h="100vh" flexDirection="column">
         <Avatar.Root size="2xl" w={"250px"} h={"250px"} objectFit={"cover"}>
-          <Avatar.Image src="../../src/assets/E-commerce logo with.png" />
+          <Avatar.Image src="./E-commerce_logo_with.png" />
         </Avatar.Root>
         <Text
           fontSize="6xl"

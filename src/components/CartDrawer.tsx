@@ -29,7 +29,7 @@ import { useState } from "react";
 import { toaster } from "@/components/ui/toaster";
 import { Link } from "react-router-dom";
 import { networkSelector } from "@/app/features/networkSlice";
-import CardDrawerSkeleton from "./Skeletons/CardDrawerSkeleton";
+import CardDrawerSkeleton from "./Skeletons/CartDrawerSkeleton";
 
 export const CartDrawer = () => {
   const dispatch = useDispatch();
@@ -96,7 +96,7 @@ export const CartDrawer = () => {
   const totalPrice = cartProducts.reduce((total, product) => {
     return total + product.price * product.quantity;
   }, 0);
-  if (cartProducts.length === 0 && !isOnline) return <CardDrawerSkeleton />
+  if (cartProducts.length === 0 && !isOnline && isDrawerOpen) return <CardDrawerSkeleton />
   return (
     <>
       <Drawer.Root

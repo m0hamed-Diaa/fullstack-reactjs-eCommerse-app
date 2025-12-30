@@ -95,7 +95,7 @@ export default function AboutPage() {
 
             <Box>
               <Image
-                src="../../src/assets/fast-delivery-shipping-concept-3d-rendering_808337-9247.jpg"
+                src="./fast-delivery-shipping-concept-3d-rendering_808337-9247.jpg"
                 alt="Our team preparing fast deliveries"
                 borderRadius="lg"
                 shadow="xl"

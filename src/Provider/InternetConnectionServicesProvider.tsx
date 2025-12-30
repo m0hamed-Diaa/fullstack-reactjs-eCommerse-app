@@ -1,5 +1,6 @@
 import { networkMode, networkSelector } from "@/app/features/networkSlice";
 import { toaster } from "@/components/ui/toaster";
+import { Wifi, WifiOff } from "lucide-react";
 import { useEffect, useRef, type ReactNode } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -10,7 +11,7 @@ const InternetConnectionServicesProvider = ({
 }) => {
   const toastRef = useRef<string | undefined>("");
   const dispatch = useDispatch();
-  const {isOnline} = useSelector(networkSelector);
+  const { isOnline } = useSelector(networkSelector);
 
   useEffect(() => {
     dispatch(networkMode(navigator.onLine));
@@ -25,6 +26,9 @@ const InternetConnectionServicesProvider = ({
         title: "You're back online!",
         description: "Connection restored successfully",
         type: "success",
+        meta: {
+          icon: <Wifi size={20} />,
+        }
       });
     };
 
@@ -44,9 +48,12 @@ const InternetConnectionServicesProvider = ({
   useEffect(() => {
     if (!isOnline && !toastRef.current) {
       toastRef.current = toaster.create({
-        title: "You're offline",
+        title: " You're offline",
         description: "Please check your internet connection",
         type: "error",
+        meta: {
+          icon: <WifiOff size={20} />,
+        },
       });
     }
   }, [isOnline]);

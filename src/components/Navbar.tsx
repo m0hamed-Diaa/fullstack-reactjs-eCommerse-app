@@ -99,7 +99,7 @@ export default function Navbar() {
         <Box fontWeight="bold">
           <RouterLink to={`/`}>
             <Avatar.Root size="2xl" w={"40px"} h={"40px"} objectFit={"cover"}>
-              <Avatar.Image src="../../src/assets/E-commerce logo with.png" />
+              <img src="./E-commerce_logo_with.png" />
             </Avatar.Root>
           </RouterLink>
         </Box>

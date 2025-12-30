@@ -2,6 +2,7 @@ import { networkSelector } from "@/app/features/networkSlice";
 import Hedear from "@/components/Hedear";
 import ProductCard from "@/components/ProductCard";
 import useCustomQuery from "@/hooks/useAuthenticatedQuery";
+import type { IProducts } from "@/interfaces";
 import CookieService from "@/services/CookieService";
 import {
   Badge,
@@ -34,8 +35,6 @@ const HomePage = () => {
       },
     },
   });
-  const product1 = data?.data[0];
-  const product2 = data?.data[1];
 
   return (
     <>
@@ -108,10 +107,11 @@ const HomePage = () => {
         ) : (
           <Grid templateColumns="repeat(auto-fit, minmax(250px, 1fr))" gap="2">
             {data?.data?.length ? (
-              <>
-                <ProductCard product={product1} key={product1.id} />
-                <ProductCard product={product2} key={product2.id} />
-              </>
+              data?.data
+                ?.slice(0, 10)
+                .map((product: IProducts) => (
+                  <ProductCard product={product} key={product.id} />
+                ))
             ) : (
               <Text as={"h2"}>No Products yet!</Text>
             )}

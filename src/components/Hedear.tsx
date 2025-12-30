@@ -85,7 +85,7 @@ export default function Header() {
         </Stack>
         <Stack w={"300px"} h={"400px"} mt={{ base: "100px", lg: "0" }}>
           <MotionBox
-            backgroundImage={'url("../../src/assets/an orange shopping c.png")'}
+            backgroundImage={'url("orange_shopping.png")'}
             backgroundSize={"cover"}
             w={"100%"}
             h={"100%"}
