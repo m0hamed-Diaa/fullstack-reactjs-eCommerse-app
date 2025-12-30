@@ -1,1 +1,0 @@
-import{C as s,ad as i,j as o,aw as n}from"./index-CZTSyGXU.js";const u=({children:r,allowFor:t})=>{const e=!!s.get("AdminInfo"),a=i();return t==="protected"&&!e?o.jsx(n,{to:"/admin/login",replace:!0,state:{from:a}}):t==="public"&&e?o.jsx(n,{to:"/admin/dashboard",replace:!0}):r};export{u as default};
