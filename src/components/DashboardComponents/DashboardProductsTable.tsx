@@ -415,6 +415,7 @@ const DashboardProductsTable = () => {
             _focus={{
               border: "1px solid orange",
             }}
+            disabled={!data?.data?.length}
           />
           {data?.data?.length === 0 && search.length >= 1 && (
             <Text my={"2"}>

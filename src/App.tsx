@@ -20,6 +20,3 @@ const App = () => {
 };
 
 export default App;
-// https://www.udemy.com/course/pro-frontend-engineer-reactjs-typescript-redux-nextjs-api-tailwindcss/learn/lecture/40159608#content
-// for make my Live Server on usually
-// https://dashboard.uptimerobot.com/

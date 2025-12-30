@@ -90,10 +90,11 @@ const Products = () => {
           _focus={{
             border: "1px solid orange",
           }}
+          disabled={!data?.data.length}
         />
-        {isLoading && (
-          <Text fontSize="sm" color="gray.500" mt={2}>
-            Searching...
+        {data?.data?.length === 0 && search.length >= 1 && (
+          <Text my={"2"}>
+            NOT Found "<span style={{ color: "red" }}>{search}</span>" Product
           </Text>
         )}
       </Box>
@@ -121,11 +122,7 @@ const Products = () => {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          NOT Found '
-          <Text color={"orange.400"} mx={"2"} borderBottom={"1px solid orange"}>
-            {search}
-          </Text>
-          ' Product
+          Not Products yet!
         </Box>
       )}
       {/* Footer */}
